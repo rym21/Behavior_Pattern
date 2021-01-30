@@ -77,10 +77,10 @@ for root, dirs, files in os.walk(edges_list_folder):
         plt.gca().yaxis.set_major_locator(plt.NullLocator())
         plt.subplots_adjust(top=1, bottom=0, right=1, left=0, hspace=0, wspace=0)
         plt.margins(0, 0)
-        if dict_node_graph_indicator[graph]=="1":   #work=工作
+        if dict_node_graph_indicator[graph]=="1": 
             work += 1
             image_name = "work." + str(work) + '.jpg'
-        if dict_node_graph_indicator[graph]=="2":   #live=生活
+        if dict_node_graph_indicator[graph]=="2": 
             live += 1
             image_name = "live." + str(live) + '.jpg'
         fig.savefig(os.getcwd() + '\CPMN\images/'

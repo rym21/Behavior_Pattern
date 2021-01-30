@@ -41,7 +41,6 @@ for idx, sub_dir in enumerate(sub_dirs):
             dst = os.path.join(sample_dir, fname)
             shutil.copyfile(src, dst)
 
-        # 验证训练集、验证集、测试集的划分的照片数目
         print(sample_dir + ' total images : %d' % (len(os.listdir(sample_dir))))
 
 random_state = 1
@@ -50,7 +49,7 @@ torch.cuda.manual_seed(random_state)
 torch.cuda.manual_seed_all(random_state)
 np.random.seed(random_state)
 
-epochs = 20
+epochs = 100
 batch_size = 8
 num_workers = 0
 use_gpu = torch.cuda.is_available()
@@ -74,7 +73,6 @@ test_dataset = datasets.ImageFolder(os.getcwd() + '\CPMN\images_train_test/test/
 test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size, shuffle=True, num_workers=num_workers)
 
 
-# 创建模型
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
