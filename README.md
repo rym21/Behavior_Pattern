@@ -1,4 +1,4 @@
-# Behavior_Pattern
+# Interactive patterns
 This is code for kdd2021.
 
 ## requirement
