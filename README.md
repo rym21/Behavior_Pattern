@@ -1,5 +1,5 @@
 # Interactive patterns
-This is code for kdd2021.
+This is code for ICDM2021.
 
 ## requirement
 `torch = 1.5.1` 
